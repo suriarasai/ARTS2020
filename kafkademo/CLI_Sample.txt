@@ -4,9 +4,9 @@ zookeeper-server-start.bat config\zookeeper.properties
 Start Kafka in another command line:
 kafka-server-start.bat config\server.properties
 
-zookeeper-server-start.bat d:/kafka2.12-2.4.1/config/zookeeper.properties
+zookeeper-server-start.bat d:/kafka_2.12-2.4.1/config/zookeeper.properties
 
-kafka-server-start.bat d:/kafka2.12-2.4.1/config/server.properties
+kafka-server-start.bat d:/kafka_2.12-2.4.1/config/server.properties
 
 TOPICS CLI Testing
 
@@ -14,19 +14,19 @@ TOPICS CLI Testing
 kafka-topics.bat --zookeeper 127.0.0.1:2181 --topic first_topic --create --partitions 3 --replication-factor 1
 
 
-kafka-topics.bat --zookeeper 127.0.0.1:2181 –list
+kafka-topics.bat --zookeeper 127.0.0.1:2181 â€“list
 
 
 kafka-topics.bat --zookeeper 127.0.0.1:2181 --topic first_topic --describe
 
 kafka-topics.bat --zookeeper 127.0.0.1:2181 --topic second_topic --create --partitions 1 --replication-factor 1
 
-kafka-topics.bat --zookeeper 127.0.0.1:2181 –list
+kafka-topics.bat --zookeeper 127.0.0.1:2181 â€“list
 
-kafka-topics.bat --zookeeper 127.0.0.1:2181 --topic second_topic –-delete DON’T GIVE
+kafka-topics.bat --zookeeper 127.0.0.1:2181 --topic second_topic â€“-delete DONâ€™T GIVE
 
 
-kafka-topics.bat --zookeeper 127.0.0.1:2181 –list
+kafka-topics.bat --zookeeper 127.0.0.1:2181 â€“list
 
 
 PRODUCER CLI Testing
@@ -37,9 +37,9 @@ kafka-console-producer --broker-list 127.0.0.1:9092 --topic first_topic --produc
 
 kafka-console-producer --broker-list 127.0.0.1:9092 --topic new_topic
 
-kafka-topics.bat --zookeeper 127.0.0.1:2181 –-list
+kafka-topics.bat --zookeeper 127.0.0.1:2181 â€“-list
 
-kafka-topics.bat --zookeeper 127.0.0.1:2181 --topic new_topic –-describe
+kafka-topics.bat --zookeeper 127.0.0.1:2181 --topic new_topic â€“-describe
 
 // d:/kafka/config/server.properties for defaults , test with a new topic 2 and demo
 
